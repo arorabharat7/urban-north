@@ -1,0 +1,86 @@
+<div class="infomation-box">
+          <div class="col-row">
+            <div class="col-box">
+              <div class="hBox">
+                <h2>{{section.settings.heading}}</h2>
+              <a class="btn" id="fab_request_callback1" data-tooltip="Request Callback">{{section.settings.heading3}}</a>
+              </div>
+              <div class="iconBox">
+                <img src="{{'phone-icon.png' | asset_url}}" alt="">
+              </div>
+              <div class="btnBox">
+                <a class="btn" id="fab_request_callback" data-tooltip="Request Callback">{{section.settings.cofoundertext}} <!--<img class="arrow" src="merchglobal_2021_files/images/arrow.png" alt="">--></a>
+              </div>
+            </div>
+            <div class="col-box">
+              <div class="hBox">
+              <h2>{{section.settings.heading1}}</h2>
+              </div>
+              <div class="iconBox">
+                <img src="{{'chat-icon.png' | asset_url}}" alt="">
+              </div>
+              <div class="btnBox">
+                <a class="btn" href="javascript:void(0)" onclick="jivo_api.open(); return false;">{{section.settings.cofoundertext1}} <!--<img class="arrow" src="merchglobal_2021_files/images/arrow.png" alt="">--></a>
+              </div>
+            </div>
+            <div class="col-box">
+              <div class="hBox">
+              <h2>{{section.settings.heading2}}</h2>
+              </div>
+              <div class="iconBox">
+                <img src="{{'email-icon.png' | asset_url}}" alt="">
+              </div>
+              <div class="btnBox">
+                <a class="btn" href="mailto:{{section.settings.cofoundertext3}}">{{section.settings.cofoundertext2}} <!--<img class="arrow" src="merchglobal_2021_files/images/arrow.png" alt="">--></a>
+              </div>
+            </div>
+          </div>
+  
+  {% schema %}
+  {
+    "name": "Contact Section",
+    "settings": [
+                  {
+                      "type":"text",
+                      "label":"call text heading",
+                      "id":"heading"
+                  },
+  				  {
+                      "type":"text",
+                      "label":"Phone Number",
+                      "id":"heading3"
+                  },
+                  {
+                      "type":"text",
+                      "label":"call Button text",
+                      "id":"cofoundertext"
+                  },
+                  {
+                      "type":"text",
+                      "label":"chat text heading",
+                      "id":"heading1"
+                  },	
+                  {
+                      "type":"text",
+                      "label":"chat Button text",
+                      "id":"cofoundertext1"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Message text heading",
+                      "id":"heading2"
+                  },	
+                  {
+                      "type":"text",
+                      "label":"Message Button text",
+                      "id":"cofoundertext2"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Email",
+                      "id":"cofoundertext3"
+                  }
+
+    ]
+  }
+{% endschema %}

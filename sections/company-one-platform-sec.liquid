@@ -1,0 +1,113 @@
+<div class="onePlatform padd-top container-width">
+        <div class="sectionHeading">
+          <h2 class="section-title">{{section.settings.heading}}</h2>
+          </div>
+          <div class="col-row2 grid-row">
+            <div class="col-box">
+              <div class="textBox">
+                <h3>{{section.settings.cofoundertext}}</h3>
+                {{section.settings.btntxt}}
+              </div>
+            </div>
+            <div class="col-box">
+              <div class="imgBox">
+                <img src="{{ section.settings.slide_image1 | img_url: 'master'}}" />
+                <div class="process-Arrow">
+                  <img src="{{'process-arrow.png' | asset_url}}" />
+              </div>
+            </div>
+            </div>
+
+          </div>
+          <div class="col-row3 grid-row">
+            <div class="col-box">
+              <div class="imgBox">
+                <img src="{{ section.settings.slide_image2 | img_url: 'master'}}" />
+                <div class="process-Arrow2">
+                  <img src="{{'process-arrow2.png' | asset_url}}" />
+              </div>
+            </div>
+            </div>
+            <div class="col-box">
+              <div class="textBox">
+                <h3>{{section.settings.cofoundertext2}}</h3>
+                {{section.settings.btntxt2}}
+              </div>
+            </div>
+          </div>
+          <div class="col-row4 grid-row">
+            <div class="col-box">
+              <div class="textBox">
+                <h3>{{section.settings.cofoundertext3}}
+                </h3>
+                {{section.settings.btntxt3}}
+              </div>
+            </div>
+            <div class="col-box">
+              <div class="imgBox">
+                <img src="{{ section.settings.slide_image3 | img_url: 'master'}}" />
+            </div>
+            </div>
+          </div>
+        </div>
+{% schema %}
+  {
+    "name": "One Platform Section",
+    "settings": [
+				                   
+                  
+                  {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading"
+                  },	
+                  {
+                      "type":"text",
+                      "label":"control Sec. heading",
+                      "id":"cofoundertext"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Control Sec. Desc.",
+                      "id":"btntxt"
+                  },
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Control Sec. Image"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Fast Sec heading",
+                      "id":"cofoundertext2"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Fast Sec. Descrip.",
+                      "id":"btntxt2"
+                  },
+                  {
+                      "id": "slide_image2",
+                      "type": "image_picker",
+                      "label": "Fast Sec. Image"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Design Sec heading",
+                      "id":"cofoundertext3"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Design Sec. Descrip.",
+                      "id":"btntxt3"
+                  },
+                  {
+                      "id": "slide_image3",
+                      "type": "image_picker",
+                      "label": "Design Sec. Image"
+                  }
+                  
+
+    ]
+  }
+{% endschema %}

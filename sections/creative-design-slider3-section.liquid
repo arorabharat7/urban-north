@@ -1,0 +1,86 @@
+<div class="col-row3 grid-row">
+    <div class="col-box">
+      <div class="imgBox">
+        <div class="product-slider">
+          <div class="item">
+            <div class="imgBox">
+              <img src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt="">
+            </div>
+          </div>
+          <div class="item">
+            <div class="imgBox">
+              <img src="{{ section.settings.slide_image2 | img_url: 'master'}}" alt="">
+            </div>
+          </div>
+          <div class="item">
+            <div class="imgBox">
+              <img src="{{ section.settings.slide_image3 | img_url: 'master'}}" alt="">
+            </div>
+          </div>
+          <div class="item">
+            <div class="imgBox">
+              <img src="{{ section.settings.slide_image4 | img_url: 'master'}}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-box">
+              <div class="textBox ml-5">
+                <h3>{{section.settings.heading1}}</h3>
+                <span class="greenBorder"></span>
+                <p>{{section.settings.cofoundertext1}}
+                </p>
+                <a class="theme-link-btn" href="{{section.settings.heading23}}">{{section.settings.heading2}} <img class="arrow" src="{{'theme-arrow.png' | asset_url}}" alt=""></a>
+              </div>
+
+
+{% schema %}
+  {
+    "name": "Creative Design Slider 3",
+    "settings": [				                                   
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Slider Image 1"
+                  },
+                  {
+                      "id": "slide_image2",
+                      "type": "image_picker",
+                      "label": "Slider Image 2"
+                  },
+                  {
+                      "id": "slide_image3",
+                      "type": "image_picker",
+                      "label": "Slider Image 3"
+                  },
+                  {
+                      "id": "slide_image4",
+                      "type": "image_picker",
+                      "label": "Slider Image 4"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Slider heading",
+                      "id":"heading1"
+                  },	
+                  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"cofoundertext1"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Button Text",
+                      "id":"heading2"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button Url",
+                      "id":"heading23"
+                  }
+                  
+
+    ]
+  }
+{% endschema %}

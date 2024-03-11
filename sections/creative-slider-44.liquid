@@ -1,0 +1,54 @@
+<div class="imgBox">
+        <div class="product-slider">
+          <div class="item">
+            <div class="imgBox">
+              <img src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt="">
+            </div>
+          </div>
+          <div class="item">
+            <div class="imgBox">
+              <img src="{{ section.settings.slide_image2 | img_url: 'master'}}" alt="">
+            </div>
+          </div>
+          <div class="item">
+            <div class="imgBox">
+              <img src="{{ section.settings.slide_image3 | img_url: 'master'}}" alt="">
+            </div>
+          </div>
+          <div class="item">
+            <div class="imgBox">
+              <img src="{{ section.settings.slide_image4 | img_url: 'master'}}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% schema %}
+  {
+    "name": "Creative Design Slider 4",
+    "settings": [				                                   
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Slider Image 1"
+                  },
+                  {
+                      "id": "slide_image2",
+                      "type": "image_picker",
+                      "label": "Slider Image 2"
+                  },
+                  {
+                      "id": "slide_image3",
+                      "type": "image_picker",
+                      "label": "Slider Image 3"
+                  },
+                  {
+                      "id": "slide_image4",
+                      "type": "image_picker",
+                      "label": "Slider Image 4"
+                  }
+                  
+
+    ]
+  }
+{% endschema %}

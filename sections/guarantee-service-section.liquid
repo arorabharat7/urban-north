@@ -1,0 +1,87 @@
+<section class="service-guarantee-section container-width">
+        <div class="col-row">
+          <div class="col-box">
+            <div class="box">
+              <div class="sectionHeading text-left">
+                <h2 class="section-title">{{section.settings.heading}}</h2>
+              </div>
+              <p>{{section.settings.cofoundertext}} 
+              </p>
+              <p>{{section.settings.cofoundertext1}} </p>
+            </div>
+          </div>
+          <div class="col-box col-right">
+            <h2>{{section.settings.cofoundertext4}}</h2>
+            <p>{{section.settings.cofoundertext5}}</p>
+            <h3>{{section.settings.cofoundertext22}}</h3>
+            <p>{{section.settings.cofoundertext2}}</p>
+            <h3>{{section.settings.cofoundertext45}}</h3>
+            <p>{{section.settings.cofoundertext47}}</p>
+            <a class="theme-link-btn" href="{{section.settings.cofoundertext9}}">{{section.settings.cofoundertext7}} <img class="arrow" src="{{ 'theme-arrow.png' | asset_url }}" alt=""></a>
+          </div>
+        </div>
+      </section>
+
+{% schema %}
+  {
+    "name": "Service Section",
+    "settings": [				  
+                  {
+                      "type":"text",
+                      "label":"heading",
+                      "id":"heading"
+                  },	
+                  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"cofoundertext"
+                  },	
+                  {
+                      "type":"html",
+                      "label":"Points",
+                      "id":"cofoundertext1"
+                  },	                  
+                  {
+                      "type":"text",
+                      "label":"Contact us Heading",
+                      "id":"cofoundertext4"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Contact us Description",
+                      "id":"cofoundertext5"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Phone No. Heading",
+                      "id":"cofoundertext22"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Phone No. Description",
+                      "id":"cofoundertext2"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Chat Heading",
+                      "id":"cofoundertext45"
+                  },                  
+                  {
+                      "type":"html",
+                      "label":"Chat Description",
+                      "id":"cofoundertext47"
+                  },                  
+                  {
+                      "type":"text",
+                      "label":"Link Text",
+                      "id":"cofoundertext7"
+                  },                  
+                  {
+                      "type":"text",
+                      "label":"Link Url",
+                      "id":"cofoundertext9"
+                  }
+
+    ]
+  }
+{% endschema %}

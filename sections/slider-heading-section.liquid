@@ -1,0 +1,25 @@
+
+        <div class="sectionHeading">
+          <h2 class="section-title">{{section.settings.heading}}</h2>
+          <p>{{section.settings.cofoundertext}}</p>
+        </div>
+
+  
+  {% schema %}
+  {
+    "name": "Slider Heading Section",
+    "settings": [				                                   
+                  {
+                      "type":"html",
+                      "label":"Slider heading",
+                      "id":"heading"
+                  },	
+                  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"cofoundertext"
+                  }
+
+    ]
+  }
+{% endschema %}

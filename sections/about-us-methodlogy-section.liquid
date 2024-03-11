@@ -1,0 +1,84 @@
+<section class="our-methodology container-width">
+        <div class="col-row">
+          <div class="col-box">
+            <div class="textBox">
+              <h3>{{section.settings.heading}}</h3>
+              <p>{{section.settings.description}}
+              </p>
+              <a class="theme-link-btn" href="{{section.settings.linktext12}}">{{section.settings.linktext}}<img class="arrow" src="{{'theme-arrow.png' | asset_url}}" alt=""></a>
+            </div>
+          </div>
+          <div class="col-box">
+            <div class="imgBox modal_box">
+			  <!--<iframe src="{{section.settings.linktext1}}" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
+<!--              <img class="bg-img" src="https://cdn.shopify.com/s/files/1/0575/5889/2740/files/Youtube-2560x1440-01.jpg?v=1637578228" alt=""> -->
+              <img class="bg-img" src="{{ section.settings.video_cover_image1 | img_url: 'master'}}" alt="">
+               <div class="contentBox">
+<!--                 <h4><span>THINK</span> <span>BRAND</span> <span>ENGAGE</span><sup>TM</sup></h4> -->
+                <button id="playBtn" class="play_btn download-toggle various fancybox fancybox.iframe" data-fancybox-type="iframe" href="https://www.youtube.com/embed/KO3nkk0ZxYA?autoplay=1" ><img class="lazy loaded"
+                    src="https://cdn.shopify.com/s/files/1/0575/5889/2740/files/play-button.png?v=1637300083" alt="Play button" width="77" height="77">
+                </button>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!--       <div class="download-modal video-modal">
+        <div id="close" class="modal-overlay download-toggle"></div>
+        <div class="modal-wrapper modal-transition">
+          <button id="close" class="video-close modal-close download-toggle">
+            <img src="{{ 'close.png' | asset_url }}">
+          </button>
+          <div class="modal-body">
+            <div class="modal-content">
+             <iframe id="modalVideo" width="560" height="415" src="https://www.youtube.com/embed/KO3nkk0ZxYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+{% schema %}
+  {
+    "name": "Methodology Section",
+    "settings": [
+				  {
+                      "id": "video_cover_image1",
+                      "type": "image_picker",
+                      "label": "Video Cover Image"
+                  },
+				  {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"description"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Link Text",
+                      "id":"linktext"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button Url",
+                      "id":"linktext12"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Video Url",
+                      "id":"linktext1"
+                  }
+                  
+                  
+    ]
+  }
+{% endschema %}
+
+

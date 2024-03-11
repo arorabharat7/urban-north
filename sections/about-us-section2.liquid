@@ -1,0 +1,98 @@
+<section class="whatKnow-section container-width">
+        <div class="sectionHeading">
+          <h2 class="section-title">{{section.settings.heading}}</h2>
+        </div>
+        <div class="col-row">
+          <div class="col-box">
+            <div class="box">
+              <h3><a href="{{section.settings.heading124}}">{{section.settings.heading11}}</a></h3>
+              <div class="imgBox">
+              
+                <img src="{{ section.settings.slide_image1 | img_url: "master"}}" alt="">
+
+              </div>
+            </div>
+          </div>
+          <div class="col-box">
+            <div class="box">
+              <h3><a href="{{section.settings.heading22}}">{{section.settings.heading21}}</a></h3>
+              <div class="imgBox">
+                             
+                <img src="{{ section.settings.slide_image2 | img_url: "master"}}" alt="">
+              
+              </div>
+            </div>
+          </div>
+          <div class="col-box">
+            <div class="box">
+              <h3><a href="{{section.settings.heading32}}">{{section.settings.heading31}}</a></h3>
+              <div class="imgBox">
+                            
+                <img src="{{ section.settings.slide_image3 | img_url: "master"}}" alt="">
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+{% schema %}
+  {
+    "name": "What We Known For Section",
+    "settings": [
+				  {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading"
+                  },
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Creativity Image"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Creativity Heading",
+                      "id":"heading11"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Creativity Url",
+                      "id":"heading124"
+                  },
+                  {
+                      "id": "slide_image2",
+                      "type": "image_picker",
+                      "label": "Quality Image"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Quality Heading",
+                      "id":"heading21"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Quality Url",
+                      "id":"heading22"
+                  },
+                  {
+                      "id": "slide_image3",
+                      "type": "image_picker",
+                      "label": "Company Image"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Company Stores Heading",
+                      "id":"heading31"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Company Stores Url",
+                      "id":"heading32"
+                  }
+    ]
+  }
+{% endschema %}
+

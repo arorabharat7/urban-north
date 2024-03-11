@@ -1,0 +1,21 @@
+{% for block in section.blocks %}
+  <img src="{{block.settings.image}}" />
+{% endfor %}
+{% schema %}
+  {
+    "name": "Banner Section",
+    "blocks":[
+           {
+               "type":"image",
+               "name":"xyz",
+               "settings":[
+                          {
+                                 "type":"image_picker",
+                                 "label":"your Image",
+                                 "id":"img1"
+                          }
+             ]
+           }
+  ]
+  }
+{% endschema %}

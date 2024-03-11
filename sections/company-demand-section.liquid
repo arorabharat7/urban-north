@@ -1,0 +1,117 @@
+<section class="company-stor padd-top container-width">
+          <div class="sectionHeading">
+          <h2 class="section-title">{{section.settings.heading}} 
+          </h2>
+          </div>
+		  <div class="col-row4 grid-row">
+		    <div class="col-box">
+            <div class="company-store-list active">
+              <h3>{{section.settings.cofoundertext}}</h3>
+			  <p>{{section.settings.btntxt}}<p>
+			</div>
+            <div class="company-store-list">
+              <h3>{{section.settings.cofoundertext2}}</h3>
+			  <p>{{section.settings.btntxt2}}<p>
+			</div>
+			<div class="company-store-list">
+              <h3>{{section.settings.cofoundertext3}}</h3>
+			  <p>{{section.settings.btntxt3}}<p>
+			</div>
+			<div class="company-store-list">
+              <h3>{{section.settings.cofoundertext4}}</h3>
+			  <p>{{section.settings.btntxt4}}<p>
+			</div>
+			<div class="company-store-list">
+              <h3>{{section.settings.cofoundertext5}}</h3>
+			  <p>{{section.settings.btntxt5}}<p>
+			</div>
+			<div class="company-store-list">
+              <h3>{{section.settings.cofoundertext6}}</h3>
+			  <p>{{section.settings.btntxt6}} <p>
+			</div>
+			</div>
+          
+		  <div class="col-box">
+		    <img width="100%" src="{{ section.settings.slide_image1 | img_url: 'master'}}">
+		  </div>
+		  </div>
+        </section>
+
+{% schema %}
+  {
+    "name": "Merch On Demand Section",
+    "settings": [				                                     
+                  {
+                      "type":"text",
+                      "label":"heading",
+                      "id":"heading"
+                  },	
+                  {
+                      "type":"text",
+                      "label":"Point 1 Heading",
+                      "id":"cofoundertext"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Point 1 Desc.",
+                      "id":"btntxt"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Point 2 Heading",
+                      "id":"cofoundertext2"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Point 2 Desc.",
+                      "id":"btntxt2"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Point 3 Heading",
+                      "id":"cofoundertext3"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Point 3 Desc.",
+                      "id":"btntxt3"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Point 4 He4ading",
+                      "id":"cofoundertext4"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Point 4 Desc.",
+                      "id":"btntxt4"
+                  },
+                   {
+                      "type":"text",
+                      "label":"Point 5 Heading",
+                      "id":"cofoundertext5"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Point 5 Desc.",
+                      "id":"btntxt5"
+                  },
+                   {
+                      "type":"text",
+                      "label":"Point 6 Heading",
+                      "id":"cofoundertext6"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Point 6 Desc.",
+                      "id":"btntxt6"
+                  },
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Right  SideImage"
+                  }
+
+    ]
+  }
+{% endschema %}

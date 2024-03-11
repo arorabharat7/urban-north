@@ -1,0 +1,55 @@
+<section class="about-hero-banner container-width">
+        <div class="bg-img">
+		 	<img class="desktopImg bg-image" src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt="">
+          <img class="mobileImg bg-image" src="{{ section.settings.slide_image2 | img_url: 'master'}}" alt="">
+         
+          <div class="textBox">
+            <h1>{{section.settings.heading}}</h1>
+            <p>{{section.settings.description}}
+            </p>
+            <div class="btnBox">
+              <a class="btn" href="{{section.settings.description1234}}">{{section.settings.description123}} <!--<img class="arrow" src="merchglobal_2021_files/images/arrow.png" alt="">--> </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% schema %}
+  {
+    "name": "About Banner Image",
+    "settings": [
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Banner Image(Desktop)"
+                  },
+                  {
+                      "id": "slide_image2",
+                      "type": "image_picker",
+                      "label": "Banner Image(Mobile)"
+                  },
+                  {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading"
+                  },
+				  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"description"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button text",
+                      "id":"description123"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button Url",
+                      "id":"description1234"
+                  }
+                ]
+
+  }
+{% endschema %}
+

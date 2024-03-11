@@ -1,0 +1,60 @@
+      <section class="socail-platform container-width">
+        <h2>{{section.settings.heading}}
+        </h2>
+        <p>{{section.settings.heading3}} 
+        </p>
+        <div class="socailBox">
+          <ul>
+            <li>
+              <a target="_blank" href="{{section.settings.cofoundertext}}"><img src="{{'facebook.png' | asset_url}}" alt=""></a>
+            </li>
+            <li>
+              <a target="_blank" href="{{section.settings.heading1}}"><img src="{{'instagram.png' | asset_url}}" alt=""></a>
+            </li>
+            <li>
+              <a target="_blank" href="{{section.settings.cofoundertext1}}"><img src="{{'vimeo.png' | asset_url}}" alt=""></a>
+            </li>
+            <li>
+              <a target="_blank" href="{{section.settings.heading2}}"><img src="{{'linkedin.png' | asset_url}}" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+{% schema %}
+  {
+    "name": "Social Media Section",
+    "settings": [
+                  {
+                      "type":"text",
+                      "label":"Heading",
+                      "id":"heading"
+                  },
+  				  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"heading3"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Facebook Url",
+                      "id":"cofoundertext"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Instagram Url",
+                      "id":"heading1"
+                  },	
+                  {
+                      "type":"text",
+                      "label":"Vimeo Url",
+                      "id":"cofoundertext1"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Linkedin Url",
+                      "id":"heading2"
+                  }
+
+    ]
+  }
+{% endschema %}

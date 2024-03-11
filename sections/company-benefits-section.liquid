@@ -1,0 +1,74 @@
+<section class="container-width padd-top color-full-boxes padd-top">
+		  <div class="sectionHeading">
+          <h2 class="section-title">{{section.settings.heading}}</h2>
+          <p>{{section.settings.cofoundertext}} 
+          </p>
+          </div>
+          <div class="col-row4 grid-row">
+            <div class="col-box colored-box sky-b">
+              <h3>{{section.settings.btntxt}}</h3>
+			  <span></span>
+			  {{section.settings.btntxt1}}
+			</div>
+            <div class="col-box colored-box sky-g">
+              <h3>{{section.settings.btntxt2}}</h3>
+			  <span></span>
+			  <p>{{section.settings.btntxt3}}<p>
+            </div>
+			<div class="col-box colored-box dark-b">
+              <h3>{{section.settings.btntxt4}}</h3>
+			  <span></span>
+			  <p>{{section.settings.btntxt5}}<p>
+            </div>
+          </div>
+        </section>
+
+{% schema %}
+  {
+    "name": "Benefits Section",
+    "settings": [
+
+                  {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading"
+                  },	
+                  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"cofoundertext"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Risk Sec. Text",
+                      "id":"btntxt"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Risk Sec. Desc",
+                      "id":"btntxt1"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Order Sec. Text",
+                      "id":"btntxt2"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Order Sec. Desc",
+                      "id":"btntxt3"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Fast Sec. Text",
+                      "id":"btntxt4"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Fast Sec. Desc",
+                      "id":"btntxt5"
+                  }
+
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,41 @@
+
+              <div class="textBox mr-5">
+                <h3>{{section.settings.heading1}} 
+                </h3>
+                <span class="greenBorder"></span>
+                <p>{{section.settings.cofoundertext1}} 
+                </p>
+                <a class="theme-link-btn" href="{{section.settings.heading23}}">{{section.settings.heading2}} <img class="arrow" src="{{'theme-arrow.png' | asset_url}}" alt=""></a>
+              </div>
+
+
+{% schema %}
+  {
+    "name": "Creative Slider 4 Descrip",
+    "settings": [				                                   
+                  {
+                      "type":"html",
+                      "label":"Slider heading",
+                      "id":"heading1"
+                  },	
+                  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"cofoundertext1"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Button Text",
+                      "id":"heading2"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button Url",
+                      "id":"heading23"
+                  }
+
+    ]
+  }
+{% endschema %}
+
+

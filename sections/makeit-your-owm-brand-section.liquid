@@ -1,0 +1,179 @@
+ <section class="custom-trim container-width">
+        <div class="sectionHeading">
+          <h2 class="section-title">{{section.settings.heading}} 
+          </h2>
+          </div>
+          <div class="col-row">
+            <div class="col-box">
+              <div class="box">
+                <div class="imgBox">
+                  <img src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt="">
+                </div>
+                <div class="step-count"></div>
+                <h3>{{section.settings.cofoundertext}} 
+                </h3>
+                <p>{{section.settings.btntxt}}
+                </p>
+              </div>
+            </div>
+            <div class="col-box">
+              <div class="box">
+                <div class="imgBox">
+                  <img src="{{ section.settings.slide_image2 | img_url: 'master'}}" alt="">
+                </div>
+                <div class="step-count"></div>
+                <h3>{{section.settings.cofoundertext2}}</h3>
+                <p>{{section.settings.btntxt2}}</p>
+              </div>
+            </div>
+            <div class="col-box">
+              <div class="box">
+                <div class="imgBox">
+                  <img src="{{ section.settings.slide_image3 | img_url: 'master'}}" alt="">
+                </div>
+                <div class="step-count"></div>
+                <h3>{{section.settings.cofoundertext3}}</h3>
+                <p>{{section.settings.btntxt3}}</p>
+              </div>
+            </div>
+          </div>
+      </section>
+
+<section class="custom-trim mobile-view container-width">
+        <div class="sectionHeading">
+          <h2 class="section-title">{{section.settings.heading21}} 
+          </h2>
+          </div>
+          <div class="col-row">
+            <div class="col-box">
+              <div class="box">
+                <div class="step-count"></div><div class="imgBox">
+                  <img src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt="">
+                </div>
+                
+                <h3>{{section.settings.cofoundertext21}}</h3>
+                <p>{{section.settings.btntxt21}} 
+                </p>
+              </div>
+            </div>
+            <div class="col-box">
+              <div class="box">
+                <div class="step-count"></div><div class="imgBox">
+                  <img src="{{ section.settings.slide_image2 | img_url: 'master'}}" alt="">
+                </div>
+                
+                <h3>{{section.settings.cofoundertext22}} </h3>
+                <p>{{section.settings.btntxt22}}
+                </p>
+              </div>
+            </div>
+            <div class="col-box">
+              <div class="box">
+                <div class="step-count"></div><div class="imgBox">
+                  <img src="{{ section.settings.slide_image3 | img_url: 'master'}}" alt="">
+                </div>
+                
+                <h3>{{section.settings.cofoundertext23}}</h3>
+                <p>{{section.settings.btntxt23}} 
+ 
+                </p>
+              </div>
+            </div>
+          </div>
+      </section>
+
+{% schema %}
+  {
+    "name": "Brand Section",
+    "settings": [
+				                   
+                  
+                  {
+                      "type":"text",
+                      "label":"heading",
+                      "id":"heading"
+                  },
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Style image"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Style Heading",
+                      "id":"cofoundertext"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Style Description",
+                      "id":"btntxt"
+                  },
+                  {
+                      "id": "slide_image2",
+                      "type": "image_picker",
+                      "label": "Colour image"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Colour Heading",
+                      "id":"cofoundertext2"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Colour Description",
+                      "id":"btntxt2"
+                  },
+                  {
+                      "id": "slide_image3",
+                      "type": "image_picker",
+                      "label": "Custom Trim image"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Custom Trim Heading",
+                      "id":"cofoundertext3"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Custom Trim Description",
+                      "id":"btntxt3"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Mobile heading",
+                      "id":"heading21"
+                  },                  
+                  {
+                      "type":"text",
+                      "label":"Style Mobile Heading",
+                      "id":"cofoundertext21"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Style Mobile Description",
+                      "id":"btntxt21"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Colour Mobile Heading",
+                      "id":"cofoundertext22"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Colour Mobile Description",
+                      "id":"btntxt22"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Trim Mobile Heading",
+                      "id":"cofoundertext23"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Trim Mobile Description",
+                      "id":"btntxt23"
+                  }
+
+    ]
+  }
+{% endschema %}

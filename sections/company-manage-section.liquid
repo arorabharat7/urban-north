@@ -1,0 +1,38 @@
+<div class="container-width">
+  <div class="dark-bottom-part">
+    <h2>{{section.settings.heading}}</h2>
+    <div class="btnBox">
+      <a href="#mailmunch-pop-1037240" class="btn download-toggle">{{section.settings.cofoundertext}}</a>
+    </div>
+    <div class="bookImg">
+      <img src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt="">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Wallpaper Section",
+    "settings": [				                                     
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Background Image"
+                  },
+                  {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading"
+                  },	
+                  {
+                      "type":"text",
+                      "label":"Button Text",
+                      "id":"cofoundertext"
+                  }
+    ]
+  }
+{% endschema %}

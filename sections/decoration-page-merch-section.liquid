@@ -1,0 +1,42 @@
+<section class="contact-info let-Success padd-top  container-width">
+          <h2>{{section.settings.heading1}}
+          </h2>
+          <p>
+           {{section.settings.cofoundertext1}}
+  
+          </p>
+          <div class="btnBox">
+            <a class="btn borderBtn" href="javascript:void(0)" onclick="jivo_api.open(); return false;">{{section.settings.heading2}}</a>
+            <a class="btn" id="fab_request_callback" data-tooltip="Request Callback">{{section.settings.heading3}}</a>
+          </div>
+        </section>
+ 
+{% schema %}
+  {
+    "name": "Merch You Section",
+    "settings": [				                                   
+                  {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading1"
+                  },	
+                  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"cofoundertext1"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Button1 Text",
+                      "id":"heading2"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Button2 Text",
+                      "id":"heading3"
+                  }
+
+    ]
+  }
+{% endschema %}
+

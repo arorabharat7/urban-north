@@ -1,0 +1,107 @@
+
+           <div class="padd-top">
+          <div class="sectionHeading text-left">
+            <h2 class="section-title">{{section.settings.heading}}</h2>
+            </div>
+            <p>{{section.settings.heading1}} 
+            </p>
+            {{section.settings.cofoundertext2}}
+            <div class="linkBox">
+              <a class="theme-link-btn" href="{{section.settings.cofoundertext55}}">{{section.settings.cofoundertext}} <img class="arrow" src="{{'theme-arrow.png' | asset_url}}" alt=""></a>
+              <a class="theme-link-btn download-toggle">{{section.settings.btntxt}} <img class="watch-icon" src="{{'watch-icon.png' | asset_url}}" alt=""></a>
+            </div>
+
+            <div class="col-row grid-row layout-5">
+              <div class="col-box">
+                <div class="imgBox">
+                  <img src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt="">
+                </div>
+              </div>
+              <div class="col-box right-col">
+                <div class="imgBox">
+                  <img src="{{ section.settings.slide_image2 | img_url: 'master'}}" alt="">
+                </div>
+                <div class="imgBox">
+                  <img src="{{ section.settings.slide_image3 | img_url: 'master'}}" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="download-modal video-modal">
+              <div id="close" class="modal-overlay download-toggle"></div>
+              <div class="modal-wrapper modal-transition">
+                <button id="close" class="video-close modal-close download-toggle">
+                  <img src="{{ 'close.png' | asset_url }}">
+                </button>
+                <div class="modal-body">
+                  <div class="modal-content">
+                    <video id="modalVideo" width="560" height="315" controls>
+      <source src="{{section.settings.btntxt12}}" type="video/mp4">
+    Your browser does not support the video tag.
+    </video> 
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+{% schema %}
+  {
+    "name": "Embroidery Section",
+    "settings": [
+				                   
+                  {
+                      "type":"html",
+                      "label":"Heading",
+                      "id":"heading"
+                  },                   
+                  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"heading1"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Points",
+                      "id":"cofoundertext2"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button 1 Text",
+                      "id":"cofoundertext"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button Url",
+                      "id":"cofoundertext55"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button 2 Text",
+                      "id":"btntxt"
+                  },
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Embroidery Image 1"
+                  },
+                  {
+                      "id": "slide_image2",
+                      "type": "image_picker",
+                      "label": "Embroidery Image 2"
+                  },
+                  {
+                      "id": "slide_image3",
+                      "type": "image_picker",
+                      "label": "Embroidery Image 3"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Video URL",
+                      "id":"btntxt12"
+                  }
+
+
+    ]
+  }
+{% endschema %}

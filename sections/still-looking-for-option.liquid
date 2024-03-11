@@ -1,0 +1,31 @@
+<section class="moreOption container-width">
+        <h2>{{section.settings.heading}}</h2>
+        <div class="btnBox">
+          <a class="btn" target="_blank" href="{{section.settings.btntxt12}}">{{section.settings.btntxt}} </a>
+        </div>
+      </section>
+
+{% schema %}
+  {
+    "name": "Still Looking For Section",
+    "settings": [
+				                                     
+                  {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading"
+                  },	
+                  {
+                      "type":"text",
+                      "label":"Button Text",
+                      "id":"btntxt"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button Url",
+                      "id":"btntxt12"
+                  }
+
+    ]
+  }
+{% endschema %}

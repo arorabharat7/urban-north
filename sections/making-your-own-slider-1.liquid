@@ -1,0 +1,85 @@
+<section class="product-customise grey-gredient container-width">
+        <div class="col-row layout-2">
+          <div class="col-box pro-view">
+     
+    <figure class="cd-image-container">
+		<img src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt="Original Image">
+		<span class="cd-image-label" data-type="original"></span>
+
+		<div class="cd-resize-img"> <!-- the resizable image on top -->
+			<img src="{{ section.settings.slide_image2 | img_url: 'master'}}" alt="Modified Image">
+			<span class="cd-image-label" data-type="modified"></span>
+		</div>
+
+		<span class="cd-handle"></span>
+	</figure>
+            
+          </div>
+          <div class="col-box pro-edit">
+            <div class="custom-box">
+              <h2>{{section.settings.heading}}</h2>
+
+              <div class="customBox">
+                <div class="box mb-5">
+                  <a href="#"><img src="{{ section.settings.slide_image3 | img_url: 'master'}}" alt=""></a>
+                </div>
+                <div class="box mb-5">
+                  <a href="#"><img src="{{ section.settings.slide_image4 | img_url: 'master'}}" alt=""></a>
+                </div>
+                <div class="box">
+                  <a href="#"><img src="{{ section.settings.slide_image5 | img_url: 'master'}}" alt=""></a>
+                </div>
+                <div class="box">
+                  <a href="#"><img src="{{ section.settings.slide_image6 | img_url: 'master'}}" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% schema %}
+  {
+    "name": "Slider Section 1",
+    "settings": [
+				                   
+                  
+                  {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading"
+                  },
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Slider Image 1"
+                  },
+                  {
+                      "id": "slide_image2",
+                      "type": "image_picker",
+                      "label": "Slider Image 2"
+                  },
+                  {
+                      "id": "slide_image3",
+                      "type": "image_picker",
+                      "label": "Custom Image 1"
+                  },
+                  {
+                      "id": "slide_image4",
+                      "type": "image_picker",
+                      "label": "Custom Image 2"
+                  },
+                  {
+                      "id": "slide_image5",
+                      "type": "image_picker",
+                      "label": "Custom Image 3"
+                  },
+                  {
+                      "id": "slide_image6",
+                      "type": "image_picker",
+                      "label": "Custom Image 4"
+                  }
+
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,405 @@
+ <div id=shopify-section-16147042426d80a2d7 class="shopify-section pxs-newsletter-section">
+      <script type=application/json data-section-type=pxs-newsletter data-section-id=16147042426d80a2d7>
+      </script>
+      <script type=application/pxs-animation-mapping+json> { "blocks" : [".pxs-newsletter-content"], "elements" :
+        [ ".pxs-newsletter-header" , ".pxs-newsletter-text" , ".pxs-newsletter-form-fields" ] } </script>
+ <section
+        class="pxs-newsletter pxs-newsletter-desktop-alignment-left pxs-newsletter-mobile-alignment-top">
+        <div class="pxs-newsletter-content pxu-lia-block">
+<div class="pxs-newsletter-header pxu-lia-element">
+<h2 class=pxs-newsletter-heading>
+{{section.settings.heading34}}
+</h2>
+<div class="pxs-newsletter-text pxu-lia-element">
+<p>{{section.settings.heading56}}</p>
+</div>
+</div>
+<div class="newsletter">
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+</style>
+
+<div id="mc_embed_signup">
+
+<form action="https://merchglobal.us7.list-manage.com/subscribe/post?u=aac8c371c86735e9417c291e5&amp;id=f0a0772eb9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+    <div id="mc_embed_signup_scroll">
+
+	<!-- <h2>Stay in the Loop</h2> -->
+
+<!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+<div id="mce-responses" class="clear">
+
+		<div class="response" id="mce-error-response" style="display:none"></div>
+
+  <div class="response" id="mce-success-response" style="display:none"></div>
+
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<div class="mc-field-group">
+<div class="form-fields-inline pxs-newsletter-form-fields pxu-lia-element">
+  <div class="form-field newsletter-input">
+	
+
+	<input type="email" value="" name="EMAIL" class="required email form-field-input form-field-text" id="mce-EMAIL">
+     <label class=form-field-title for=newsletter_email>
+  Email address
+  </label>
+    <!-- <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+
+</label> -->
+</div>
+
+	
+
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_aac8c371c86735e9417c291e5_f0a0772eb9" tabindex="-1" value=""></div>
+
+    <div class="clear form-field newsletter-submit"><input type="submit" value="Sign Up" name="Sign Up" id="mc-embedded-subscribe" class="button button-primary mdc-ripple-surface mdc-ripple-upgraded"></div>
+
+    </div>
+
+</form>
+
+</div>
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--   <script>
+    jQuery(document).ready(function(){
+      jQuery('#mce-success-response').css("display", "block").function({
+         jQuery(this).append('dsfdsfsdf');
+      });
+    });
+  </script> -->
+  </div>
+</div>
+</section>
+<script
+  type="application/json"
+  data-section-id="{{ section.id }}"
+  data-section-type="static-footer">
+</script>
+
+<footer role="contentinfo" aria-label="Footer">
+  <section class="site-footer-wrapper">
+    {% if section.blocks.size %}
+      <div class="site-footer-item">
+        <div class="site-footer-blocks column-count-{{ section.blocks.size }}">
+          {% render 'footer-block' for section.blocks as block %}
+          <div class="site-footer-block-item site-footer-block-rich-text1">
+                  <div class="imgBox">
+                    <a href="{{section.settings.btntxt1234}}" target="_blank" title="https://www.merchsearch.ca/">
+                      <img src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="site-footer-block-item site-footer-block-rich-text2">
+                  <img class="footerArrow" src="{{'footer-arrow.png' | asset_url}}" alt="">
+                  <h2 class=site-footer-block-title>
+                    {{section.settings.heading}}
+                  </h2>
+                  <div class="site-footer-block-content rte">
+                    <p>{{section.settings.heading133}}</p> </div>
+                        </div> </div> </div> <div class=site-footer-item>
+                        
+                  </div>
+        </div>
+      </div>
+    {% endif %}
+    
+
+    <div class="site-footer-item">
+      <div class="site-footer-information">
+        <div class="site-footer-left">
+
+          {% if linklists[section.settings.additional_menu].links != blank %}
+            <nav
+              class="site-footer-navigation"
+              aria-label="{{ 'general.accessibility.nav_footer' | t }}"
+            >
+              {%
+                render 'navlist',
+                menu_list: linklists[section.settings.additional_menu].links,
+                depth: 1,
+                max_depth: 1,
+                aria_expanded: true,
+              %}
+            </nav>
+          {% endif %}
+
+          <p class="site-footer-credits">
+            {% assign year = 'now' | date: '%Y' %}
+            {{section.settings.heading133456}}
+          </p>
+        </div>
+
+        {%- assign currency_selector = section.settings.show_currency_selector -%}
+        {%- assign locale_selector = section.settings.show_locale_selector -%}
+
+        {%- if section.settings.payment_icons or currency_selector or locale_selector -%}
+          <div class="site-footer-right">
+            {% comment %}Inject @pixelunion/shopify-cross-border/cross-border begin{% endcomment %}
+            {% form 'localization' %}
+              {% if locale_selector and form.available_locales.size > 1 %}
+                {% comment %}Inject @pixelunion/shopify-cross-border/multi-language begin{% endcomment %}
+                {% comment %} Generate a "random" number so ids are unique {% endcomment %}
+                {% assign unique_id = "now" | date: "%N" | modulo: 1000 %}
+                
+                <div class="selectors-form__item">
+                  <div class="disclosure" data-disclosure-locale>
+                    <h2 class="visually-hidden" id="lang-heading-{{ unique_id }}">
+                      {{ 'general.language.dropdown_label' | t }}
+                    </h2>
+                
+                    <button
+                      type="button"
+                      class="disclosure__toggle"
+                      aria-expanded="false"
+                      aria-controls="lang-list-{{ unique_id }}"
+                      aria-describedby="lang-heading-{{ unique_id }}"
+                      data-disclosure-toggle
+                    >
+                      {{ form.current_locale.endonym_name }}
+                    </button>
+                    <ul id="lang-list-{{ unique_id }}" class="disclosure-list" data-disclosure-list>
+                      {% for locale in form.available_locales %}
+                        <li>
+                          <a class="disclosure-list__item {% if locale.iso_code == form.current_locale.iso_code %}disclosure-list__item--current{% endif %}" href="#" lang="{{ locale.iso_code }}" {% if locale.iso_code == form.current_locale.iso_code %}aria-current="true"{% endif %} data-value="{{ locale.iso_code }}" data-disclosure-option>
+                            <span class="disclosure-list__option">{{ locale.endonym_name }}</span>
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                    <input type="hidden" name="locale_code" id="LocaleSelector-{{ unique_id }}" value="{{ form.current_locale.iso_code }}" data-disclosure-input/>
+                  </div>
+                </div>
+                {% comment %}Inject @pixelunion/shopify-cross-border/multi-language end{% endcomment %}
+            
+              {% endif %}
+            
+              {% if currency_selector and form.available_currencies.size > 1 %}
+                {% comment %}Inject @pixelunion/shopify-cross-border/multi-currency begin{% endcomment %}
+                {% comment %} Generate a "random" number so ids are unique {% endcomment %}
+                {% assign unique_id = "now" | date: "%N" | modulo: 1000 %}
+                
+                <div class="selectors-form__item">
+                  <div class="disclosure" data-disclosure-currency>
+                    <h2 class="visually-hidden" id="currency-heading-{{ unique_id }}">
+                      {{ 'general.currency.dropdown_label' | t }}
+                    </h2>
+                
+                    <button
+                      type="button"
+                      class="disclosure__toggle"
+                      aria-expanded="false"
+                      aria-controls="currency-list-{{ unique_id }}"
+                      aria-describedby="currency-heading-{{ unique_id }}"
+                      data-disclosure-toggle
+                    >
+                      {{ form.current_currency.iso_code }} {%- if form.current_currency.symbol -%}{{ form.current_currency.symbol }}{%- endif -%}
+                    </button>
+                    <ul id="currency-list-{{ unique_id }}" class="disclosure-list" data-disclosure-list>
+                      {% for currency in form.available_currencies %}
+                        <li>
+                          <a class="disclosure-list__item {% if currency.iso_code == form.current_currency.iso_code %}disclosure-list__item--current{% endif %}" href="#" {% if currency.iso_code == form.current_currency.iso_code %}aria-current="true"{% endif %} data-value="{{ currency.iso_code }}" data-disclosure-option>
+                            <span class="disclosure-list__option">{{ currency.iso_code }} {%- if currency.symbol -%}{{ currency.symbol }}{%- endif -%}</span>
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                    <input type="hidden" name="currency_code" id="CurrencySelector-{{ unique_id }}" value="{{ form.current_currency.iso_code }}" data-disclosure-input/>
+                  </div>
+                </div>
+                {% comment %}Inject @pixelunion/shopify-cross-border/multi-currency end{% endcomment %}
+            
+              {% endif %}
+            {% endform %}
+            {% comment %}Inject @pixelunion/shopify-cross-border/cross-border end{% endcomment %}
+
+            {% if section.settings.payment_icons and shop.enabled_payment_types.size > 0 %}
+              <ul class="payment-icons">
+                {% for type in shop.enabled_payment_types %}
+                  <li class="payment-icons-item">
+                    {{ type | payment_type_svg_tag }}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "max_blocks": 5,
+  "settings": [
+    {
+                      "type":"html",
+                      "label":"Newsletter Heading",
+                      "id":"heading34"
+    },
+    {
+                      "type":"html",
+                      "label":"News Letter Description",
+                      "id":"heading56"
+    },
+    {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Footer Image Image"
+    },
+    {
+                      "type":"text",
+                      "label":"Image Url",
+                      "id":"btntxt1234"
+    },
+    {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading"
+    },
+    {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"heading133"
+    },
+    {
+                      "type":"html",
+                      "label":"Copyright Text",
+                      "id":"heading133456"
+    },
+    {
+      "type": "header",
+      "content": "Payment icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_icons",
+      "label": "Show payment icons",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Language Selector",
+      "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "Show language selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Currency Selector",
+      "info": "To add a currency, go to your [payment settings.](/admin/settings/payments)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_currency_selector",
+      "label": "Show currency selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Additional menu"
+    },
+    {
+      "type": "link_list",
+      "id": "additional_menu",
+      "label": "Menu",
+      "default": "footer",
+      "info": "This menu won't show dropdown items."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu",
+          "default": "main-menu",
+          "info": "This menu won't show dropdown items."
+        }
+      ]
+    },
+    {
+      "type": "rich_text",
+      "name": "Rich text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Rich text"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Use this section to welcome customers to your store, say a bit about your brand, or share news and seasonal promotions.</p>"
+        }
+      ]
+    },
+    {
+      "type": "social_accounts",
+      "name": "Social accounts",
+      "limit": 1,
+      "settings": [
+       {
+         "type": "paragraph",
+         "content": "Social links can be managed in your General settings."
+       }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Subscribe"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Invite customers to join your mailing list.</p>"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "settings": {
+      "additional_menu": "footer"
+    },
+    "blocks": [
+      {
+        "type": "menu",
+        "settings": {}
+      },
+      {
+        "type": "newsletter",
+        "settings": {}
+      }
+    ]
+  }
+}
+
+{% endschema %}

@@ -1,0 +1,55 @@
+<section class="sustainable-apparel container-width">
+        <div class="sectionHeading">
+          <h2 class="section-title">{{section.settings.heading}}
+          </h2>
+          <p>{{section.settings.heading1}} 
+          </p>
+         </div>
+<!-- 		 <div class="videoBox">
+          <iframe src="{{section.settings.heading3}}" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FFdQWxru1vs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> -->
+        <div class="imgBox videoBox modal_box">
+<!--           <img class="bg-img" src="https://cdn.shopify.com/s/files/1/0575/5889/2740/files/ECO-SOFT__video_frame.jpg?v=1637302582" alt=""> -->
+         <img class="bg-img" src="{{ section.settings.video_cover_image1 | img_url: 'master'}}" alt="">
+          <div class="contentBox">
+<button id="playBtn" class="play_btn download-toggle various fancybox fancybox.iframe" data-fancybox-type="iframe" href="https://www.youtube.com/embed/FFdQWxru1vs?autoplay=1" ><img class="lazy loaded"
+                    src="https://cdn.shopify.com/s/files/1/0575/5889/2740/files/play-button.png?v=1637300083" alt="Play button" width="77" height="77">
+                </button>
+          </div>
+        </div>
+  
+      </section>
+
+
+
+
+{% schema %}
+  {
+    "name": "Eco-Soft Section",
+    "settings": [
+				                    
+                  {
+                      "id": "video_cover_image1",
+                      "type": "image_picker",
+                      "label": "Video Cover Image"
+                  },
+				  {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"heading1"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Video Url",
+                      "id":"heading3"
+                  }
+
+    ]
+  }
+{% endschema %}

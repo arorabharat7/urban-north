@@ -1,0 +1,54 @@
+<section class="about-hero-banner makin-your-banner container-width">
+        <div class="bg-img">
+          <img class="desktopImg bg-image" src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt="">
+          <img class="mobileImg bg-image" src="{{ section.settings.slide_image2 | img_url: 'master'}}" alt="">
+          <div class="textBox">
+            <h1>{{section.settings.heading}}</h1>
+            <p>{{section.settings.cofoundertext}}
+            </p>
+            <div class="btnBox">
+              <a class="btn" href="{{section.settings.btntxt12}}">{{section.settings.btntxt}} <!--<img class="arrow" src="merchglobal_2021_files/images/arrow.png" alt="">--> </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% schema %}
+  {
+    "name": "Banner Section",
+    "settings": [
+				                   
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Banner Image(Desktop)"
+                  },
+                  {
+                      "id": "slide_image2",
+                      "type": "image_picker",
+                      "label": "Banner Image(Mobile)"
+                  },
+                  {
+                      "type":"html",
+                      "label":"heading",
+                      "id":"heading"
+                  },	
+                  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"cofoundertext"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button Text",
+                      "id":"btntxt"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button Url",
+                      "id":"btntxt12"
+                  }
+
+    ]
+  }
+{% endschema %}

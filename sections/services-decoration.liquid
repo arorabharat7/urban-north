@@ -1,0 +1,47 @@
+<div class="col-row col-row3">
+    <div class="col-box">
+      <div class="imgBox">
+        <a href="/pages/decoration"> <img class="bg-img" src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt=""></a>
+      </div>
+    </div>
+    <div class="col-box">
+      <div class="textBox">
+        <h2> {{section.settings.heading1}}</h2>
+        <p>{{section.settings.heading1234}}</p>
+        <a class="theme-link-btn" href="{{section.settings.btntxt123}}">{{section.settings.btntxt2}}<img class="arrow" src="//cdn.shopify.com/s/files/1/0575/5889/2740/t/6/assets/theme-arrow.png?v=14552204008677238856" alt=""></a>
+      </div>
+    </div>
+  </div>
+{% schema %}
+  {
+    "name": "Decoration Section",
+    "settings": [				                                     
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Decoration Section Image"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Decoration Section heading",
+                      "id":"heading1"
+                  },
+                  {
+                      "type":"html",
+                      "label":"Decoration Section Description",
+                      "id":"heading1234"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button Text",
+                      "id":"btntxt2"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Button Url",
+                      "id":"btntxt123"
+                  }
+
+    ]
+  }
+{% endschema %}

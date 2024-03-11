@@ -1,0 +1,97 @@
+
+      <a
+        class="logo"
+        href="{{ routes.root_url }}">
+        {% if section.settings.logo %}
+          {% assign logo_alt = section.settings.logo.alt %}
+          {% if logo_alt == '' %}
+            {% assign logo_alt = shop.name | strip %}
+          {% endif %}
+
+          {%
+            render 'rimg',
+            img: section.settings.logo,
+            class: 'logo',
+            alt: logo_alt,
+            size: logo_size
+          %}
+        {% else %}
+          {% if template == 'index' %}
+            <h1 class="logo">
+              {{ shop.name }}
+            </h1>
+          {% else %}
+            <span class="logo">
+              {{ shop.name }}
+            </span>
+          {% endif %}
+        {% endif %}
+      </a>
+        <div class="menu-btn">
+            <div class="menu-btn__lines"></div>
+        </div>
+        <ul class="menu-items">
+            <li><a href="#" class="menu-item">Apparel</a></li>
+            <li><a href="#" class="menu-item">Headware</a></li>
+            <li><a href="#" class="menu-item">Accessories</a></li>
+            <li><a href="#" class="menu-item">About us</a></li>
+        </ul>
+        <ul class="menu-items-social">
+            <li><a href="#" class="menu-item"><img src="images/shopping-bag-line.svg" alt=""></a></li>
+            {% if shop.customer_accounts_enabled %}
+            {% unless customer %}
+              <li class="site-header-actions__account-link">
+                <span class="site-header__account-icon">
+                  {% render 'icon-library', id: 'icon-account' %}
+                </span>
+                <a href="{{ routes.account_login_url }}" class="site-header_account-link-text">
+                  {{ 'header.account.login' | t }}
+                </a>
+              </li>
+            {% else %}
+              <li class="site-header-actions__account-link">
+                <span class="site-header__account-icon">
+                  {% render 'icon-library', id: 'icon-account' %}
+                </span>
+                <span class="site-header__account-links">
+                 <a href="{{ routes.account_url }}" class="site-header__account-link--account">{{ 'header.account.title' | t }}</a>
+                 <a href="{{ routes.account_logout_url }}" class="site-header__account-link--logout" data-no-instant>{{ 'header.account.logout' | t }}</a>
+                </span>
+              </li>
+            {% endunless %}
+          {% endif %}
+        </ul>
+
+
+
+
+{% schema %}
+  {
+    "name": "URBAN NORTH HEADER",
+    "class": "navbar sticky",
+    "settings": [
+     {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image",
+        "info": "94 × 37px .png recommended"
+      },
+      {
+      "type": "header",
+      "content": "Menus"
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Main menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "image_picker",
+        "id": "cart_icon",
+        "label": "cart image",
+        "info": "23 × 24 px .png recommended"
+      }
+    ]
+  }
+{% endschema %}

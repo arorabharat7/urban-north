@@ -1,0 +1,52 @@
+<div class="experts-tshirt padd-top container-width">
+        <div class="sectionHeading">
+          <h2 class="section-title">{{section.settings.heading}}</h2>
+          <p>{{section.settings.cofoundertext}}</p>
+          </div>
+  
+		<!--<div class="video-theme">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/rCp9lSCWhck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div> -->
+        <div class="video-theme">
+          <div class="imgBox modal_box">
+			<!-- <img class="bg-img" src="https://cdn.shopify.com/s/files/1/0575/5889/2740/files/Intro_v2_c8258631-3c98-4a41-936d-e7e2a8e3cbe1.jpg?v=1637577683" alt=""> -->
+            <img class="bg-img" src="{{ section.settings.video_cover_image1 | img_url: 'master'}}" alt="">
+            <div class="contentBox">
+             <button id="playBtn" class="play_btn download-toggle various fancybox fancybox.iframe" data-fancybox-type="iframe" href="https://www.youtube.com/embed/rCp9lSCWhck?autoplay=1" ><img class="lazy loaded"
+                    src="https://cdn.shopify.com/s/files/1/0575/5889/2740/files/play-button.png?v=1637300083" alt="Play button" width="77" height="77">
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+{% schema %}
+  {
+    "name": "On Demand Section",
+    "settings": [				                                    
+                  {
+                      "id": "video_cover_image1",
+                      "type": "image_picker",
+                      "label": "Video Cover Image"
+                  },
+				  {
+                      "type":"text",
+                      "label":"heading",
+                      "id":"heading"
+                  },	
+                  {
+                      "type":"html",
+                      "label":"Description",
+                      "id":"cofoundertext"
+                  },
+                  {
+                      "type":"text",
+                      "label":"Video Url",
+                      "id":"btntxt"
+                  }
+
+    ]
+  }
+{% endschema %}

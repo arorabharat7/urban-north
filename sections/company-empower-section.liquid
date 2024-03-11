@@ -1,0 +1,71 @@
+<section class="empoweringBrand container-width padd-top">
+          <div class="sectionHeading">
+          <h2 class="section-title">{{section.settings.heading}}</h2>
+</div>
+          <div class="your-brand">
+            <div class="frameBox">
+              <img class="frame-img desktop-img" src="{{ 'leptop.png' | asset_url}}" alt="image">
+              <img class="frame-img mobile-img" src="{{ 'leptop-mobile.webp' | asset_url}}" alt="image">
+              <div class="your-brand-slider">
+                <div class="item">
+                  <div class="imgBox">
+                    <img src="{{ section.settings.slide_image1 | img_url: 'master'}}" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="imgBox">
+                    <img src="{{ section.settings.slide_image2 | img_url: 'master'}}" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="imgBox">
+                    <img src="{{ section.settings.slide_image3 | img_url: 'master'}}" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="imgBox">
+                    <img src="{{ section.settings.slide_image4 | img_url: 'master'}}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+  </section>
+         
+
+{% schema %}
+  {
+    "name": "Empowering Section",
+    "settings": [
+				   
+                  {
+                      "type":"text",
+                      "label":"heading",
+                      "id":"heading"
+                  },
+                  {
+                      "id": "slide_image1",
+                      "type": "image_picker",
+                      "label": "Slider Image 1"
+                  },
+                  {
+                      "id": "slide_image2",
+                      "type": "image_picker",
+                      "label": "Slider Image 2"
+                  },
+                  {
+                      "id": "slide_image3",
+                      "type": "image_picker",
+                      "label": "Slider Image 3"
+                  },
+                  {
+                      "id": "slide_image4",
+                      "type": "image_picker",
+                      "label": "Slider Image 4"
+                  }
+                  
+
+    ]
+  }
+{% endschema %}
